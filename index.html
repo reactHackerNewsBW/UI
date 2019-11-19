@@ -1,0 +1,145 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Hacker News</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700|Varela+Round&display=swap" rel="stylesheet">
+  <link href="css/index.css" rel="stylesheet">
+  <link
+  rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+  crossorigin="anonymous" />
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+
+  <!-- This section includes all elements inside of the background image of landing page, including the fixed navbar -->
+  <header id="home">
+    <div class="nav-container">
+      <div id="navbar">
+        <h2>Hacker News</h1>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="team.html">Team</a>
+          <a href="#">Sign In</a>
+          <a href="#">Sign Up</a>
+        </nav>
+      </div>
+    </div>
+    <div class="bg-img" style="background-image: url(img/bg1.jpg);">
+    </div>
+    <div class="main-header">
+      <h1>Hacker News</h1>
+      <h3><u>The</u> social news site for computer science and entrepreneurship</h3>
+      <div class="buttons">
+        <button class="cta1">Sign In</button>
+        <button class="cta2">Sign Up</button>
+      </div>
+    </div>
+    </div>
+  </header>
+
+  <!-- This container includes all elements in first section (Services: white background) -->
+  <section class="section1-container">
+
+    <div class="section1-title">
+      <h2>Redesigned for 2019</h2>
+      <div class="line-break"></div>
+    </div>
+
+    <!-- This container includes the three boxes arranged horizontally in content section -->
+    <div class="box-container">
+      <div class="box">
+        <img class="icons" src="img/news.png" alt="Newspaper icon" />
+        <h3>Today's Top News</h3>
+        <p>Lorizzle ipsum dolizzle shiznit bling bling, fizzle adipiscing gizzle. Nullizzle sapiz.</p>
+        <a href="#">Read more</a>
+      </div>
+
+      <div class="box">
+        <img class="icons" src="img/jobs.png" alt="Job search icon" />
+        <h3>Startup Job Listings</h3>
+        <p>Vivamizzle my shizz mauris ghetto nisi pot pretizzle. Vivamizzle shiznit amet lacizzle.</p>
+        <a href="#">Read more</a>
+      </div>
+      
+      <div class="box">
+        <img class="icons" src="img/questions.png" alt="Question mark icon" />
+        <h3>Ask the Community</h3>
+        <p>Quisque a ipsizzle eu mi bling bling vehicula. Break yo neck, yall i saw beyonces tizze.</p>
+        <a href="#">Read more</a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- This container includes all elements in second section (Featured News: grey background) -->
+  <section class="section2-container">
+
+    <div class="section2-title">
+      <h2>Featured News</h2>
+      <div class="line-break"></div>
+    </div>
+
+    <div class="featured-container">
+      <img class="featured-news" src="img/square.png" alt="" />
+      <img class="featured-news" src="img/square.png" alt="" />
+      <img class="featured-news" src="img/square.png" alt="" />
+      <img class="featured-news" src="img/square.png" alt="" />
+      <img class="featured-news" src="img/square.png" alt="" />
+      <img class="featured-news" src="img/square.png" alt="" />
+    </div>
+
+  </section>
+
+  <!-- This container includes all elements in third section (Get in touch: white background) -->
+  <section class="section3-container">
+
+    <div class="section3-title">
+      <h2>Get In Touch</h2>
+      <div class="line-break"></div>
+    </div>
+
+    <div class="contact-container">  
+      <form class="cf">
+        <div class="half left cf">
+          <input type="text" id="input-name" placeholder="Name">
+          <input type="email" id="input-email" placeholder="Email address">
+          <input type="text" id="input-subject" placeholder="Subject">
+        </div>
+        <div class="half right cf">
+          <textarea name="message" type="text" id="input-message" placeholder="Message"></textarea>
+        </div>  
+        <input type="submit" value="Submit" id="input-submit">
+      </form>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>Copyright &#9400; Lambda School Build Week 2019</p>
+  </footer>
+
+  <script> //this script changes the background color of the navbar to black after scrolling 50px, by changing it's class to .navbar1
+      window.onscroll = function() {
+        var nav = document.getElementById('navbar');
+        if ( window.pageYOffset > 50 ) {
+          nav.classList.add("navbar1");
+        } else {
+          nav.classList.remove("navbar1");
+        }
+      }
+  </script>
+
+</body>
+</html>

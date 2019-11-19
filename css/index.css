@@ -1,0 +1,485 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+html,
+body {
+  font-family: 'Varela Round', sans-serif;
+  color: black;
+}
+h2,
+h3,
+h4,
+h5 {
+  color: black;
+}
+h1 {
+  font-size: 5rem;
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+}
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4rem;
+  color: black;
+  text-align: center;
+}
+h3 {
+  font-size: 2.5rem;
+}
+p {
+  font-size: 1.6rem;
+  line-height: 1.4;
+}
+.nav-container {
+  display: block;
+  position: fixed;
+  width: 100%;
+}
+.nav-container #navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  background-attachment: scroll;
+  z-index: 999;
+  position: absolute;
+  top: 0;
+}
+.nav-container #navbar h2 {
+  font-size: 2.5rem;
+  padding: 0.5% 5%;
+  padding-top: 1%;
+  width: 30%;
+  color: white;
+}
+.nav-container #navbar nav {
+  width: 35%;
+  font-size: 1.8rem;
+  padding: 0.5% 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-container #navbar nav a {
+  color: white;
+  text-decoration: none;
+}
+.nav-container .navbar1 {
+  background-color: black !Important;
+}
+form {
+  max-width: 800px;
+  text-align: center;
+  margin: 20px auto;
+}
+form input,
+form textarea {
+  border: 0;
+  outline: 0;
+  padding: 1em;
+  border-radius: 8px;
+  display: block;
+  width: 100%;
+  height: 43px;
+  margin-top: 1em;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 1.5rem;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  resize: none;
+}
+form input:focus,
+form textarea:focus {
+  box-shadow: 0 0px 3px #009631;
+}
+form #input-submit {
+  color: white;
+  background: #009631;
+  height: 50px;
+  padding-top: 2%;
+  cursor: pointer;
+}
+form #input-submit:hover {
+  box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+}
+form textarea {
+  height: 150px;
+}
+.half {
+  float: left;
+  width: 48%;
+  margin-bottom: 1em;
+}
+.right {
+  width: 50%;
+}
+.left {
+  margin-right: 2%;
+}
+@media (max-width: 480px) {
+  .half {
+    width: 100%;
+    float: none;
+    margin-bottom: 0;
+  }
+}
+/* Clearfix */
+.cf:before,
+.cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+.cf:after {
+  clear: both;
+}
+footer {
+  display: block;
+  color: white;
+  background: black;
+  padding: 20px 0;
+  border: 1px double black;
+  border-radius: 5px;
+}
+footer p {
+  text-align: center;
+}
+#home {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  max-width: 100%;
+  position: scroll;
+}
+#home .bg-img {
+  min-height: 720px;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  position: absolute;
+  background-color: black;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  display: block;
+}
+#home .main-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-around;
+  text-align: center;
+  margin: 15% 0;
+}
+#home .main-header h1 {
+  font-size: 7.5rem;
+  margin: 0.5% auto;
+  color: white;
+}
+#home .main-header h3 {
+  font-size: 2.4rem;
+  color: white;
+  font-family: 'Varela Round', sans-serif;
+  letter-spacing: 0.15rem;
+}
+#home .main-header .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#home .main-header .buttons .cta1 {
+  display: block;
+  cursor: pointer;
+  width: 22%;
+  height: 54px;
+  font-size: 2.4rem;
+  border-radius: 10px;
+  color: black;
+  text-align: center;
+  margin: 2% 1%;
+  background-color: white;
+  border: 2px solid white;
+}
+#home .main-header .buttons .cta1:hover {
+  color: white;
+  background-color: black;
+  border: 1px solid white;
+}
+#home .main-header .buttons .cta2 {
+  display: block;
+  cursor: pointer;
+  width: 22%;
+  height: 54px;
+  font-size: 2.4rem;
+  border-radius: 10px;
+  color: black;
+  text-align: center;
+  margin: 2% 1%;
+  background-color: palegreen;
+  border: 2px solid palegreen;
+}
+#home .main-header .buttons .cta2:hover {
+  color: white;
+  background-color: black;
+  border: 1px solid white;
+}
+.section1-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 12% 5% 5% 5%;
+  width: 90%;
+  height: 100%;
+  background-color: white;
+  color: black;
+}
+.section1-container .section1-title {
+  width: 100%;
+}
+.section1-container .section1-title h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4rem;
+  color: black;
+  text-align: center;
+}
+.section1-container .section1-title .line-break {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 40px;
+  background-color: #009631;
+  margin: 2% auto;
+}
+.section1-container .box-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 3% auto;
+}
+.section1-container .box-container .box {
+  width: 30%;
+  text-align: center;
+  padding: 40px 20px;
+  border: 1px solid #ededed;
+  margin: 15px 0px;
+}
+.section1-container .box-container .box .icons {
+  filter: invert(34%) sepia(86%) saturate(5313%) hue-rotate(137deg) brightness(99%) contrast(101%);
+}
+.section1-container .box-container .box h3 {
+  font-size: 2.4rem;
+  font-family: 'Montserrat', sans-serif;
+  margin: 7% 0;
+}
+.section1-container .box-container .box p {
+  font-size: 1.8rem;
+  color: #8a8a8a;
+  padding-bottom: 2%;
+}
+.section1-container .box-container .box a {
+  font-size: 1.8rem;
+}
+.section2-container {
+  width: 100%;
+  background-color: #FAFAFA;
+  border-top: 1px solid #EEE;
+  border-bottom: 1px solid #EEE;
+  padding-bottom: 4%;
+}
+.section2-container .section2-title {
+  width: 100%;
+  margin-top: 8%;
+}
+.section2-container .section2-title h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4rem;
+  color: black;
+  text-align: center;
+}
+.section2-container .section2-title .line-break {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 40px;
+  background-color: #009631;
+  margin: 2% auto;
+}
+.section2-container .featured-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  margin: 4% auto;
+}
+.section2-container .featured-container .featured-news {
+  width: 24%;
+  margin: 1% 3%;
+}
+.section3-container {
+  width: 100%;
+  background-color: white;
+}
+.section3-container .section3-title {
+  width: 100%;
+  margin-top: 8%;
+}
+.section3-container .section3-title h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4rem;
+  color: black;
+  text-align: center;
+}
+.section3-container .section3-title .line-break {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 40px;
+  background-color: #009631;
+  margin: 2% auto;
+}
+.section3-container .contact-container {
+  width: 60%;
+  background-color: #FAFAFA;
+  border: 1px solid #EEE;
+  padding: 2% 0;
+  margin: 4% auto;
+  border-radius: 10px;
+}
