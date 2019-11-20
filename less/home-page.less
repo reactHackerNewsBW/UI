@@ -32,6 +32,7 @@
       .fonts(2.4rem, white);
       font-family: 'Varela Round', sans-serif;
       letter-spacing: 0.15rem;
+      padding: 0.25% 0;
     }
     .buttons {
       .custom-layout(center,center);
@@ -68,7 +69,14 @@
   .box-container {
     .custom-layout(space-between, flex-start);
     margin: 3% auto;
+    :hover {
+      background-color: #dbdbdb;
+      -webkit-transition: background-color 500ms linear;
+      -ms-transition: background-color 500ms linear;
+      transition: background-color 500ms linear;
+    }
     .box {
+      display: block;
       width: 30%;
       text-align: center;
       padding: 40px 20px;
