@@ -179,7 +179,6 @@ p {
 }
 .nav-container #navbar a {
   padding: 0.5% 1%;
-  padding-top: 1%;
   width: 25%;
 }
 .nav-container #navbar a h2 {
@@ -320,7 +319,6 @@ footer p {
   color: white;
   font-family: 'Varela Round', sans-serif;
   letter-spacing: 0.15rem;
-  padding: 0.25% 0;
 }
 #home .main-header .buttons {
   display: flex;
@@ -368,7 +366,7 @@ footer p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 12% 5% 5% 5%;
+  margin: 5% 5% 5% 5%;
   width: 90%;
   height: 100%;
   background-color: white;
@@ -376,6 +374,7 @@ footer p {
 }
 .section1-container .section1-title {
   width: 100%;
+  padding-top: 10%;
 }
 .section1-container .section1-title h2 {
   font-family: 'Montserrat', sans-serif;
@@ -409,6 +408,7 @@ footer p {
   text-align: center;
   padding: 40px 20px;
   border: 1px solid #ededed;
+  border-radius: 10px;
   margin: 15px 0px;
 }
 .section1-container .box-container .box .icons {
@@ -463,6 +463,7 @@ footer p {
 .section2-container .featured-container .featured-news {
   width: 24%;
   margin: 1% 3%;
+  border-radius: 10px;
 }
 .section3-container {
   width: 100%;
@@ -491,8 +492,8 @@ footer p {
   background-color: #FAFAFA;
   border: 2px solid #EEE;
   padding: 2% 0;
-  margin: 4% auto;
-  margin-bottom: 8%;
+  margin: 6% auto;
+  margin-bottom: 10%;
   border-radius: 10px;
 }
 #team-header {
@@ -536,7 +537,6 @@ footer p {
   color: white;
   font-family: 'Varela Round', sans-serif;
   letter-spacing: 0.15rem;
-  padding: 0.25% 0;
 }
 #team-header .team-header img {
   width: 15%;
