@@ -172,6 +172,7 @@ p {
   align-items: center;
   width: 100%;
   margin: 0 auto;
+  padding: 1% 0;
   background-attachment: scroll;
   z-index: 999;
   position: absolute;
@@ -397,7 +398,7 @@ footer p {
   margin: 3% auto;
 }
 .section1-container .box-container :hover {
-  background-color: #dbdbdb;
+  background-color: #f7f7f7;
   -webkit-transition: background-color 500ms linear;
   -ms-transition: background-color 500ms linear;
   transition: background-color 500ms linear;
@@ -422,7 +423,7 @@ footer p {
 .section1-container .box-container .box p {
   font-size: 1.8rem;
   color: #8a8a8a;
-  padding-bottom: 2%;
+  padding-bottom: 2.5%;
 }
 .section1-container .box-container .box a {
   font-size: 1.8rem;
