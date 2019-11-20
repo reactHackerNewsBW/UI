@@ -1,0 +1,47 @@
+#team-header {
+    .columns(space-between, center);
+    height: 100vh;
+    max-width: 100%;
+    position: scroll;
+    .bg-img {
+        min-height: 720px;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        position: absolute;
+        background-color: black;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        display: block;
+        }
+    .team-header {
+        .columns(center, space-around);
+        text-align: center;
+        margin: 15% 0;
+        h1 {
+            .fonts(5.5rem, white);
+            margin: 0.5% auto;
+        }
+        h3 {
+            .fonts(2.4rem, white);
+            font-family: 'Varela Round', sans-serif;
+            letter-spacing: 0.15rem;
+        }
+        img {
+            width: 15%;
+            margin: 1.5% auto;
+            filter: invert(1);
+        }
+    }
+}
+
+.team-sec1 {
+    width: 90%;
+    margin: 10% auto;
+    p {
+        margin-bottom: 10%;
+    }
+}

@@ -1,0 +1,36 @@
+// Navigation Bar
+
+.nav-container {
+    display: block;
+    position: fixed;
+    width: 100%;
+    #navbar {
+        .custom-layout(space-between, center);
+        width: 100%;
+        margin: 0 auto;
+        background-attachment: scroll;
+        z-index: 999;
+        position: absolute;
+        top: 0;
+        a {
+            padding: 0.5% 1%;
+            width: 25%;
+            h2 {
+                .fonts(2.5rem, white);
+            }
+        }
+        nav {
+            width: 35%;
+            font-size: 1.8rem;
+            padding: 0.5% 5%;
+            .custom-layout(space-between, center);
+            a {
+                color: white;
+                text-decoration: none;
+            }
+        }
+    }
+    .navbar1 {
+        background-color: black !Important;
+    }
+}
