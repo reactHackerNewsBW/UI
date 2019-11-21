@@ -2,37 +2,53 @@
 
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Hacker News | Team</title>
+    <title>Hacker News | Team</title>
 
-  <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:700|Varela+Round&display=swap" rel="stylesheet">
-  <link href="css/index.css" rel="stylesheet">
-  <link
-  rel="stylesheet"
-  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-  crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700|Varela+Round&display=swap" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous" />
 
-  <!--[if lt IE 9]>
+    <!-- This script creates a 'smooth scroll' feature when clicking navbar links that scroll down to a specific section of the page -->
+    <script>
+    $(document).ready(function () {
+        $('a[href^="#"]').on('click', function (e) {
+            e.preventDefault();
+            var target = this.hash,
+                $target = $(target);
+            $('html, body').stop().animate({
+                'scrollTop': $target.offset().top - 140
+            }, 900, 'swing', function () {
+                window.location.hash = target;
+            });
+        });
+    });
+    </script>
+
+    <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-  <![endif]-->
+    <![endif]-->
 </head>
 
 <body>
 
     <div class="nav-container">
         <div id="navbar" class="team-nav">
-            <a href="index.html"><h2>Hacker News</h2></a>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="index.html#features">Features</a>
-                <a href="index.html#news">Top News</a>
-                <a href="#team-contact-section">Contact Us</a>
-                <a href="team.html">Our Team</a>
-                <a href="#">Sign In/Up</a>
+            <a class="logo" href="/index.html"><h2>Hacker News</h2></a>
+            <nav id="nav">
+                <a class="navlinks" href="index.html">Home</a>
+                <a class="navlinks" href="index.html#features">Features</a>
+                <a class="navlinks" href="index.html#news">Top News</a>
+                <a class="navlinks" href="#team-contact-section">Contact Us</a>
+                <a class="navlinks" href="team.html">Our Team</a>
+                <a class="navlinks" href="#">Sign In/Up</a>
             </nav>
         </div>
     </div>
@@ -86,7 +102,7 @@
             </div>
             <div class="member">
                 <img class="photo" src="img/jeffery.png" alt="Photo of Jeffery Desir" />
-                <h4>Jeffery Desir</h4>
+                <h4>Jeffrey Desir</h4>
                 <p>Frontend Developer</p>
                 <a href="https://github.com/jffrydsr">GitHub</a>
             </div>
@@ -100,7 +116,7 @@
     </section>
 
     <!-- This section includes all elements pertaining to Lambda Build Week (text and Lambda logo: white background) -->
-    <section id="sponsor-section">
+    <section id="sponsor-section" name="sponsor-section">
         <h3>Brought to you by</h3>
         <div class="lambda-bw">
             <img src="img/lambdaschool.png" alt="Lambda School logo" />
@@ -114,7 +130,7 @@
         <img src="img/click-here.png" alt="Click here, icon" />
     </section>
 
-    <section  id="team-contact-section">
+    <section  id="team-contact-section" name="team-contact-section">
         <div class="help-title">
             <h2>What can we help with?</h2>
             <div class="line-break"></div>

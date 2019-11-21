@@ -4,10 +4,8 @@
 #home {
   .columns(space-between, center);
   height: 100vh;
-  max-width: 100%;
   position: scroll;
   .bg-img {
-    min-height: 720px;
     left: 0;
     top: 0;
     right: 0;
@@ -17,6 +15,7 @@
     background-color: black;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-position: center;
     background-size: cover;
     display: block;
   }
@@ -24,9 +23,18 @@
     .columns(center, space-around);
     text-align: center;
     margin: 15% 0;
+    @media @mobile {
+      margin-top: 50%;
+    }
+    @media @tablet {
+      margin-top: 28%;
+    }
     h1 {
       .fonts(7.2rem, white);
       margin: 0.5% auto;
+      @media @mobile {
+        font-size: 4.5rem;
+      }
     }
     h3 {
       .fonts(2.4rem, white);
@@ -55,13 +63,15 @@
   margin: 12% 5% 5% 5%;
   width: 90%;
   height: 100%;
-  background-color: white;
   color: black;
   .section1-title {
     width: 100%;
     padding-top: 10%;
     h2 {
       .title-text();
+      @media @mobile {
+        .mobile-title();
+      }
     }
     .line-break {
       .line();
@@ -70,31 +80,53 @@
   .box-container {
     .custom-layout(space-between, flex-start);
     margin: 3% auto;
+    width: 100%;
     :hover {
       background-color: @bggrey;
-      -webkit-transition: background-color 500ms linear;
-      -ms-transition: background-color 500ms linear;
-      transition: background-color 500ms linear;
+      -webkit-transition: background-color 300ms linear;
+      -ms-transition: background-color 300ms linear;
+      transition: background-color 300ms linear;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.25), 0 4px 8px rgba(0,0,0,0.22);
+    }
+    @media @mobile {
+      .columns(center, center);
     }
     .box {
       display: block;
-      width: 30%;
+      width: 32%;
       text-align: center;
       padding: 40px 20px;
       border: 1px solid @bordergrey;
       border-radius: 10px;
       margin: 15px 0px;
+      :hover {
+        box-shadow: none;
+      }
+      @media @mobile {
+        width: 90%;
+        border: 1px solid @bordergrey;
+        box-shadow: 0 2px 2px rgba(black, 0.1);
+      }
       h3 {
         font-size: 2.4rem;
         font-family: 'Montserrat', sans-serif;
         margin: 7% 0;
+        :hover {
+          box-shadow: none;
+        }
       }
       p {
         .fonts(1.8rem,#8a8a8a);
         padding-bottom: 2.5%;
+        :hover {
+          box-shadow: none;
+        }
       }
       a {
         font-size: 1.8rem;
+        :hover {
+          box-shadow: none;
+        }
       }
     }
   }
@@ -112,6 +144,10 @@
     margin-top: 8%;
     h2 {
       .title-text();
+      @media @mobile {
+        .mobile-title();
+        margin: 0 20%;
+      }
     }
     .line-break {
       .line();
@@ -121,10 +157,32 @@
     .wrap(space-around, center);
     width: 90%;
     margin: 4% auto;
+    @media @mobile {
+      .columns(center, center);
+    }
     .top-news {
-      width: 24%;
-      margin: 1% 3%;
+      width: 28%;
+      margin: 1% 2%;
+      border: 1px solid @bordergrey;
       border-radius: 10px;
+      :hover {
+        box-shadow: 0 4px 8px rgba(0,0,0,0.25), 0 4px 8px rgba(0,0,0,0.22);
+      }
+      @media @mobile {
+        width: 90%;
+        margin: 3% 0;
+        box-shadow: 0 2px 2px rgba(black, 0.1);
+      }
+      @media @tablet {
+        width: 45%;
+        margin-top: 2%;
+        box-shadow: 0 2px 2px rgba(black, 0.1);
+      }
+      img {
+        width: 100%;
+        margin: 0 auto;
+        border-radius: 10px;
+      }
     }
   }
 }
@@ -138,21 +196,12 @@
     margin-top: 8%;
     h2 {
       .title-text();
+      @media @mobile {
+        .mobile-title();
+      }
     }
     .line-break {
       .line();
     }
-  }
-
-  // Grey box container surrounding the contact form
-  .contact-container {
-    width: 60%;
-    background-color: @bggrey;
-    border: 2px solid @bordergrey;
-    padding: 2%;
-    margin: 5% auto;
-    margin-bottom: 10%;
-    border-radius: 10px;
-
   }
 }

@@ -16,6 +16,25 @@
   integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
   crossorigin="anonymous" />
 
+  <!-- Icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- This script creates a 'smooth scroll' feature when clicking navbar links that scroll down to a specific section of the page -->
+  <script>
+    $(document).ready(function () {
+      $('a[href^="#"]').on('click', function (e) {
+        e.preventDefault();
+        var target = this.hash,
+            $target = $(target);
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top - 140
+        }, 900, 'swing', function () {
+            window.location.hash = target;
+        });
+      });
+    });
+  </script>
+
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
@@ -27,14 +46,14 @@
   <header id="home">
     <div class="nav-container">
       <div id="navbar">
-          <a href="./index.html"><h2>Hacker News</h2></a>
-        <nav>
-          <a href="index.html">Home</a>
-          <a href="#features">Features</a>
-          <a href="#news">Top News</a>
-          <a href="#contact">Contact Us</a>
-          <a href="team.html">Our Team</a>
-          <a href="#">Sign In/Up</a>
+          <a class="logo" href="/index.html"><h2>Hacker News</h2></a>
+        <nav id="nav">
+          <a class="navlinks" href="/index.html">Home</a>
+          <a class="navlinks" href="#features">Features</a>
+          <a class="navlinks" href="#news">Top News</a>
+          <a class="navlinks" href="#contact">Contact Us</a>
+          <a class="navlinks" href="/team.html">Our Team</a>
+          <a class="navlinks" href="#">Sign In/Up</a>
         </nav>
       </div>
     </div>
@@ -51,7 +70,7 @@
   </header>
 
   <!-- This section includes all elements in first section (Services: white background) -->
-  <section id="features" class="section1-container">
+  <section id="features" name="features" class="section1-container">
 
     <div class="section1-title">
       <h2>Redesigned for 2019</h2>
@@ -63,29 +82,29 @@
       <div class="box">
         <img class="icons" src="img/news.png" alt="Newspaper icon" />
         <h3>Today's Top News</h3>
-        <p>Lorizzle ipsum dolizzle shiznit bling bling, fizzle adipiscing gizzle at.</p>
-        <a href="#">Read more</a>
+        <p>The ideal source for breaking news in tech and startups.</p>
+        <a href="#news">View News</a>
       </div>
 
       <div class="box">
         <img class="icons" src="img/jobs.png" alt="Job search icon" />
         <h3>Startup Job Listings</h3>
-        <p>Vivamizzle my shizz mauris ghetto nisi pot pretizzle. Vivamizzle shiznit.</p>
-        <a href="#">Read more</a>
+        <p>Looking to work at a hot new tech startup? Look no further.</p>
+        <a href="https://news.ycombinator.com/jobs">Find Jobs</a>
       </div>
       
       <div class="box">
         <img class="icons" src="img/questions.png" alt="Question mark icon" />
         <h3>Ask the Community</h3>
-        <p>Quisque a ipsizzle eu mi bling bling vehicula. Break yo neck, yall i saw.</p>
-        <a href="#">Read more</a>
+        <p>Get your questions answered by our community of experts.</p>
+        <a href="https://news.ycombinator.com/ask">Ask Now</a>
       </div>
     </div>
 
   </section>
 
   <!-- This section includes all elements in second section (Featured News: grey background) -->
-  <section id="news" class="section2-container">
+  <section id="news" name="news" class="section2-container">
 
     <div class="section2-title">
       <h2>Breaking News & Top Stories</h2>
@@ -93,18 +112,30 @@
     </div>
 
     <div class="news-container">
-      <img class="top-news" src="img/square.png" alt="" />
-      <img class="top-news" src="img/square.png" alt="" />
-      <img class="top-news" src="img/square.png" alt="" />
-      <img class="top-news" src="img/square.png" alt="" />
-      <img class="top-news" src="img/square.png" alt="" />
-      <img class="top-news" src="img/square.png" alt="" />
+      <a class="top-news" href="https://www.eetimes.com/document.asp?doc_id=1335297">
+        <img src="img/microsoft-gpu.png" alt="Screenshot of article about Microsoft's new Graphcore AI chips" />
+      </a>
+      <a class="top-news" href="https://pursuit.unimelb.edu.au/articles/how-do-you-crack-the-code-to-a-lost-ancient-script">
+        <img class="top-news" src="img/ancient-script.png" alt="Screenshot of article about cracking the code of lost ancient scripts" />
+      </a>
+      <a class="top-news" href="https://www.bbc.com/future/article/20140905-the-women-with-super-human-vision">
+        <img class="top-news" src="img/supervision.png" alt="Screenshot of article about women with superhuman vision" />
+      </a>
+      <a class="top-news" href="https://www.wbur.org/hereandnow/2019/11/15/amtrak-profit-train-ceo-richard-anderson">
+        <img class="top-news" src="img/amtrak.png" alt="Screenshot of article about Amtrak turning a profit for the first time ever" />
+      </a>
+      <a class="top-news" href="https://blog.benjojo.co.uk/post/userspace-usb-drivers">
+        <img class="top-news" src="img/usb.png" alt="Screenshot of article about writing userspace USB drives to abandoned devices" />
+      </a>
+      <a class="top-news" href="https://www.1843magazine.com/food-drink/world-in-a-dish/how-turkish-coffee-destroyed-an-empire">
+        <img src="img/turkish.png" alt="Screenshot of article about how Turkish coffee destroyed an empire" />
+      </a>
     </div>
 
   </section>
 
   <!-- This section includes all elements in third section (Contact form: white background) -->
-  <section id="contact" class="section3-container">
+  <section id="contact" name="contact" class="section3-container">
 
     <div class="section3-title">
       <h2>Get In Touch</h2>
@@ -141,6 +172,18 @@
           nav.classList.remove("navbar1");
         }
       }
+  </script>
+
+  <!-- This script creates a mobile 'hamburger' navigation menu when at 500px or less -->
+  <script>
+    function myFunction() {
+      var x = document.getElementById("nav");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
   </script>
 
 </body>
