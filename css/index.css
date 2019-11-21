@@ -482,14 +482,13 @@ footer p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 12% 5% 5% 5%;
+  margin: 9% 5% 5% 5%;
   width: 90%;
   height: 100%;
   color: black;
 }
 .section1-container .section1-title {
   width: 100%;
-  padding-top: 10%;
 }
 .section1-container .section1-title h2 {
   font-family: 'Montserrat', sans-serif;
@@ -866,6 +865,7 @@ footer p {
 #team-section .team-container .member p {
   font-size: 2rem;
   color: #8a8a8a;
+  margin-top: -5px;
 }
 @media (max-width: 500px) {
   #team-section .team-container .member p {
@@ -875,6 +875,7 @@ footer p {
 #team-section .team-container .member a {
   font-size: 2rem;
   color: #009631;
+  margin-top: -8px;
 }
 #sponsor-section {
   display: flex;
