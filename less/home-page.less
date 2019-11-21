@@ -1,5 +1,6 @@
 // Homepage Content
 
+// Header section with all elements inside background image
 #home {
   .columns(space-between, center);
   height: 100vh;
@@ -24,9 +25,8 @@
     text-align: center;
     margin: 15% 0;
     h1 {
-      font-size: 7.5rem;
+      .fonts(7.2rem, white);
       margin: 0.5% auto;
-      color: white;
     }
     h3 {
       .fonts(2.4rem, white);
@@ -49,6 +49,7 @@
   }
 }
 
+// Features section including boxes with listed site features
 .section1-container {
   .columns(center, center);
   margin: 12% 5% 5% 5%;
@@ -70,7 +71,7 @@
     .custom-layout(space-between, flex-start);
     margin: 3% auto;
     :hover {
-      background-color: #f7f7f7;
+      background-color: @bggrey;
       -webkit-transition: background-color 500ms linear;
       -ms-transition: background-color 500ms linear;
       transition: background-color 500ms linear;
@@ -80,12 +81,9 @@
       width: 30%;
       text-align: center;
       padding: 40px 20px;
-      border: 1px solid #ededed;
+      border: 1px solid @bordergrey;
       border-radius: 10px;
       margin: 15px 0px;
-      .icons {
-        filter: invert(34%) sepia(86%) saturate(5313%) hue-rotate(137deg) brightness(99%) contrast(101%);
-      }
       h3 {
         font-size: 2.4rem;
         font-family: 'Montserrat', sans-serif;
@@ -102,11 +100,12 @@
   }
 }
 
+// Breaking news section including the site's top stories
 .section2-container {
   width: 100%;
-  background-color: #FAFAFA;
-  border-top: 1px solid #EEE;
-  border-bottom: 1px solid #EEE;
+  background-color: @bggrey;
+  border-top: 1px solid @bordergrey;
+  border-bottom: 1px solid @bordergrey;
   padding-bottom: 4%;
   .section2-title {
     width: 100%;
@@ -118,11 +117,11 @@
       .line();
     }
   }
-  .featured-container {
+  .news-container {
     .wrap(space-around, center);
     width: 90%;
     margin: 4% auto;
-    .featured-news {
+    .top-news {
       width: 24%;
       margin: 1% 3%;
       border-radius: 10px;
@@ -130,6 +129,7 @@
   }
 }
 
+// Contact section including the contact form
 .section3-container {
   width: 100%;
   background-color: white;
@@ -143,12 +143,14 @@
       .line();
     }
   }
+
+  // Grey box container surrounding the contact form
   .contact-container {
     width: 60%;
-    background-color: #FAFAFA;
-    border: 2px solid #EEE;
-    padding: 2% 0;
-    margin: 6% auto;
+    background-color: @bggrey;
+    border: 2px solid @bordergrey;
+    padding: 2%;
+    margin: 5% auto;
     margin-bottom: 10%;
     border-radius: 10px;
 
