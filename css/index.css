@@ -1,6 +1,6 @@
 /* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
+    v2.0 | 20110126
+    License: none (public domain)
 */
 html,
 body,
@@ -85,7 +85,6 @@ audio,
 video {
   margin: 0;
   padding: 0;
-  border: 0;
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
@@ -131,11 +130,15 @@ table {
 }
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 html,
 body {
   font-family: 'Varela Round', sans-serif;
   color: black;
+}
+body {
+  width: 100%;
 }
 h2,
 h3,
@@ -178,26 +181,83 @@ p {
   position: absolute;
   top: 0;
 }
-.nav-container #navbar a {
-  padding: 0.5% 0;
-  width: 25%;
+@media (max-width: 500px) {
+  .nav-container #navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    padding: 0 2% 2% 2%;
+  }
 }
-.nav-container #navbar a h2 {
+@media (max-width: 800px) {
+  .nav-container #navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2% 2% 2%;
+  }
+}
+.nav-container #navbar .logo {
+  padding: 0.5% 0;
+  width: 23%;
+}
+@media (max-width: 500px) {
+  .nav-container #navbar .logo {
+    padding-top: 1.5%;
+    width: 40%;
+  }
+}
+@media (max-width: 800px) {
+  .nav-container #navbar .logo {
+    padding-top: 1.5%;
+  }
+}
+.nav-container #navbar .logo h2 {
   font-size: 2.5rem;
   color: white;
 }
-.nav-container #navbar nav {
+@media (max-width: 500px) {
+  .nav-container #navbar .logo h2 {
+    font-size: 2.2rem;
+    padding-left: 3%;
+    padding-top: 3%;
+  }
+}
+.nav-container #navbar #nav {
   width: 65%;
   font-size: 1.8rem;
-  padding: 0.5% 2% 0.5% 0;
+  padding: 0.5% 3% 0.5% 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.nav-container #navbar nav a {
+@media (max-width: 500px) {
+  .nav-container #navbar #nav {
+    width: 100%;
+    padding: 0;
+    margin: 0 5%;
+  }
+}
+@media (max-width: 800px) {
+  .nav-container #navbar #nav {
+    width: 90%;
+    font-size: 2rem;
+    padding: 0;
+  }
+}
+.nav-container #navbar #nav .navlinks {
   color: white;
   text-decoration: none;
   text-align: center;
+}
+@media (max-width: 500px) {
+  .nav-container #navbar #nav .navlinks {
+    color: white;
+    font-size: 1.4rem;
+  }
 }
 .nav-container .navbar1 {
   background-color: black !Important;
@@ -205,8 +265,28 @@ p {
 .team-nav {
   background-color: black;
 }
+.contact-container {
+  width: 60%;
+  background-color: #F7F7F7;
+  border: 2px solid #EEE;
+  padding: 2%;
+  margin: 5% auto;
+  margin-bottom: 10%;
+  border-radius: 10px;
+}
+@media (max-width: 500px) {
+  .contact-container {
+    width: 90%;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  }
+}
+@media (max-width: 800px) {
+  .contact-container {
+    width: 90%;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  }
+}
 form {
-  max-width: 800px;
   text-align: center;
   margin: 20px auto;
   padding-bottom: 1%;
@@ -228,6 +308,12 @@ form textarea {
 form input:focus,
 form textarea:focus {
   box-shadow: 0 0px 3px #009631;
+}
+@media (max-width: 500px) {
+  form input,
+  form textarea {
+    font-size: 1.25rem;
+  }
 }
 form #input-submit {
   color: white;
@@ -253,7 +339,8 @@ form textarea {
 .left {
   margin-right: 2%;
 }
-@media (max-width: 480px) {
+@media (max-width: 500px) {
+  width: 100%;
   .half {
     width: 100%;
     float: none;
@@ -289,11 +376,9 @@ footer p {
   justify-content: space-between;
   align-items: center;
   height: 100vh;
-  max-width: 100%;
   position: scroll;
 }
 #home .bg-img {
-  min-height: 720px;
   left: 0;
   top: 0;
   right: 0;
@@ -303,6 +388,7 @@ footer p {
   background-color: black;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-position: center;
   background-size: cover;
   display: block;
 }
@@ -314,10 +400,25 @@ footer p {
   text-align: center;
   margin: 15% 0;
 }
+@media (max-width: 500px) {
+  #home .main-header {
+    margin-top: 50%;
+  }
+}
+@media (max-width: 800px) {
+  #home .main-header {
+    margin-top: 28%;
+  }
+}
 #home .main-header h1 {
   font-size: 7.2rem;
   color: white;
   margin: 0.5% auto;
+}
+@media (max-width: 500px) {
+  #home .main-header h1 {
+    font-size: 4.5rem;
+  }
 }
 #home .main-header h3 {
   font-size: 2.4rem;
@@ -334,7 +435,7 @@ footer p {
   display: block;
   cursor: pointer;
   width: 22%;
-  height: 52px;
+  height: 54px;
   font-size: 2.4rem;
   border-radius: 10px;
   color: black;
@@ -348,11 +449,16 @@ footer p {
   background-color: black;
   border: 1px solid white;
 }
+@media (max-width: 500px) {
+  #home .main-header .buttons .cta1 {
+    height: 50px;
+  }
+}
 #home .main-header .buttons .cta2 {
   display: block;
   cursor: pointer;
   width: 22%;
-  height: 52px;
+  height: 54px;
   font-size: 2.4rem;
   border-radius: 10px;
   color: black;
@@ -366,6 +472,11 @@ footer p {
   background-color: black;
   border: 1px solid white;
 }
+@media (max-width: 500px) {
+  #home .main-header .buttons .cta2 {
+    height: 50px;
+  }
+}
 .section1-container {
   display: flex;
   flex-direction: column;
@@ -374,7 +485,6 @@ footer p {
   margin: 12% 5% 5% 5%;
   width: 90%;
   height: 100%;
-  background-color: white;
   color: black;
 }
 .section1-container .section1-title {
@@ -386,6 +496,14 @@ footer p {
   font-size: 4rem;
   color: black;
   text-align: center;
+}
+@media (max-width: 500px) {
+  .section1-container .section1-title h2 {
+    font-size: 3.3rem;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    text-align: center;
+  }
 }
 .section1-container .section1-title .line-break {
   content: "";
@@ -400,34 +518,63 @@ footer p {
   justify-content: space-between;
   align-items: flex-start;
   margin: 3% auto;
+  width: 100%;
 }
 .section1-container .box-container :hover {
   background-color: #F7F7F7;
-  -webkit-transition: background-color 500ms linear;
-  -ms-transition: background-color 500ms linear;
-  transition: background-color 500ms linear;
+  -webkit-transition: background-color 300ms linear;
+  -ms-transition: background-color 300ms linear;
+  transition: background-color 300ms linear;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25), 0 4px 8px rgba(0, 0, 0, 0.22);
+}
+@media (max-width: 500px) {
+  .section1-container .box-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .section1-container .box-container .box {
   display: block;
-  width: 30%;
+  width: 32%;
   text-align: center;
   padding: 40px 20px;
   border: 1px solid #EEE;
   border-radius: 10px;
   margin: 15px 0px;
 }
+.section1-container .box-container .box :hover {
+  box-shadow: none;
+}
+@media (max-width: 500px) {
+  .section1-container .box-container .box {
+    width: 90%;
+    border: 1px solid #EEE;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  }
+}
 .section1-container .box-container .box h3 {
   font-size: 2.4rem;
   font-family: 'Montserrat', sans-serif;
   margin: 7% 0;
+}
+.section1-container .box-container .box h3 :hover {
+  box-shadow: none;
 }
 .section1-container .box-container .box p {
   font-size: 1.8rem;
   color: #8a8a8a;
   padding-bottom: 2.5%;
 }
+.section1-container .box-container .box p :hover {
+  box-shadow: none;
+}
 .section1-container .box-container .box a {
   font-size: 1.8rem;
+}
+.section1-container .box-container .box a :hover {
+  box-shadow: none;
 }
 .section2-container {
   width: 100%;
@@ -446,6 +593,15 @@ footer p {
   color: black;
   text-align: center;
 }
+@media (max-width: 500px) {
+  .section2-container .section2-title h2 {
+    font-size: 3.3rem;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    text-align: center;
+    margin: 0 20%;
+  }
+}
 .section2-container .section2-title .line-break {
   content: "";
   display: block;
@@ -462,9 +618,40 @@ footer p {
   width: 90%;
   margin: 4% auto;
 }
+@media (max-width: 500px) {
+  .section2-container .news-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .section2-container .news-container .top-news {
-  width: 24%;
-  margin: 1% 3%;
+  width: 28%;
+  margin: 1% 2%;
+  border: 1px solid #EEE;
+  border-radius: 10px;
+}
+.section2-container .news-container .top-news :hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25), 0 4px 8px rgba(0, 0, 0, 0.22);
+}
+@media (max-width: 500px) {
+  .section2-container .news-container .top-news {
+    width: 90%;
+    margin: 3% 0;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  }
+}
+@media (max-width: 800px) {
+  .section2-container .news-container .top-news {
+    width: 45%;
+    margin-top: 2%;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  }
+}
+.section2-container .news-container .top-news img {
+  width: 100%;
+  margin: 0 auto;
   border-radius: 10px;
 }
 .section3-container {
@@ -481,6 +668,14 @@ footer p {
   color: black;
   text-align: center;
 }
+@media (max-width: 500px) {
+  .section3-container .section3-title h2 {
+    font-size: 3.3rem;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    text-align: center;
+  }
+}
 .section3-container .section3-title .line-break {
   content: "";
   display: block;
@@ -489,18 +684,14 @@ footer p {
   background-color: #009631;
   margin: 2% auto;
 }
-.section3-container .contact-container {
-  width: 60%;
-  background-color: #F7F7F7;
-  border: 2px solid #EEE;
-  padding: 2%;
-  margin: 5% auto;
-  margin-bottom: 10%;
-  border-radius: 10px;
-}
 .spacer {
   width: 100%;
   height: 140px;
+}
+@media (max-width: 500px) {
+  .spacer {
+    height: 100px;
+  }
 }
 #team-header {
   display: flex;
@@ -510,6 +701,16 @@ footer p {
   background-color: white;
   width: 85%;
   margin: 0 auto;
+}
+@media (max-width: 500px) {
+  #team-header {
+    padding-bottom: 5%;
+  }
+}
+@media (max-width: 800px) {
+  #team-header {
+    padding: 3% 0;
+  }
 }
 #team-header .about-us {
   display: flex;
@@ -524,14 +725,29 @@ footer p {
   margin-right: 5px;
   margin-bottom: 5px;
 }
+@media (max-width: 500px) {
+  #team-header .about-us .line {
+    width: 30px;
+  }
+}
 #team-header .about-us h5 {
   font-size: 2rem;
   color: #009631;
   margin-bottom: 5%;
 }
+@media (max-width: 500px) {
+  #team-header .about-us h5 {
+    font-size: 1.7rem;
+  }
+}
 #team-header h1 {
   font-size: 4.8rem;
   color: black;
+}
+@media (max-width: 500px) {
+  #team-header h1 {
+    font-size: 4rem;
+  }
 }
 #team-header h2 {
   font-size: 3.4rem;
@@ -539,6 +755,11 @@ footer p {
   font-family: 'Varela Round', sans-serif;
   text-align: left;
   margin: 2% 0 8% 0;
+}
+@media (max-width: 500px) {
+  #team-header h2 {
+    display: none;
+  }
 }
 #team-header h2 a {
   color: #949494;
@@ -559,6 +780,16 @@ footer p {
 #team-section .lead-container .lead-photo {
   width: 24%;
   border-radius: 200px;
+}
+@media (max-width: 500px) {
+  #team-section .lead-container .lead-photo {
+    width: 34%;
+  }
+}
+@media (max-width: 800px) {
+  #team-section .lead-container .lead-photo {
+    width: 34%;
+  }
 }
 #team-section .lead-container h4 {
   font-size: 2.5rem;
@@ -582,6 +813,22 @@ footer p {
   align-items: center;
   padding: 1%;
 }
+@media (max-width: 500px) {
+  #team-section .team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+@media (max-width: 800px) {
+  #team-section .team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
 #team-section .team-container .member {
   display: flex;
   flex-direction: column;
@@ -589,6 +836,18 @@ footer p {
   align-items: center;
   width: 25%;
   margin: 2% 2%;
+}
+@media (max-width: 500px) {
+  #team-section .team-container .member {
+    width: 35%;
+    margin-top: 3%;
+  }
+}
+@media (max-width: 800px) {
+  #team-section .team-container .member {
+    width: 35%;
+    margin-top: 3%;
+  }
 }
 #team-section .team-container .member .photo {
   width: 100%;
@@ -599,15 +858,23 @@ footer p {
   color: black;
   margin-top: 7px;
 }
+@media (max-width: 500px) {
+  #team-section .team-container .member h4 {
+    text-align: center;
+  }
+}
 #team-section .team-container .member p {
   font-size: 2rem;
   color: #8a8a8a;
-  margin-top: -5px;
+}
+@media (max-width: 500px) {
+  #team-section .team-container .member p {
+    text-align: center;
+  }
 }
 #team-section .team-container .member a {
   font-size: 2rem;
   color: #009631;
-  margin-top: -8px;
 }
 #sponsor-section {
   display: flex;
@@ -617,9 +884,32 @@ footer p {
   margin: 0 auto;
   padding: 8% 0;
 }
+@media (max-width: 500px) {
+  #sponsor-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+  }
+}
+@media (max-width: 800px) {
+  #sponsor-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+  }
+}
 #sponsor-section h3 {
   font-size: 4.8rem;
   color: black;
+}
+@media (max-width: 500px) {
+  #sponsor-section h3 {
+    font-size: 4.2rem;
+  }
 }
 #sponsor-section .lambda-bw {
   display: flex;
@@ -628,13 +918,38 @@ footer p {
   align-items: center;
   width: 35%;
 }
+@media (max-width: 500px) {
+  #sponsor-section .lambda-bw {
+    width: 80%;
+  }
+}
+@media (max-width: 800px) {
+  #sponsor-section .lambda-bw {
+    width: 70%;
+  }
+}
 #sponsor-section .lambda-bw img {
   width: 90%;
 }
+@media (max-width: 500px) {
+  #sponsor-section .lambda-bw img {
+    margin-top: 2%;
+  }
+}
+@media (max-width: 800px) {
+  #sponsor-section .lambda-bw img {
+    margin-top: 2%;
+  }
+}
 #sponsor-section .lambda-bw h4 {
-  font-size: 4rem;
+  font-size: 3.5rem;
   color: black;
   letter-spacing: 1px;
+}
+@media (max-width: 800px) {
+  #sponsor-section .lambda-bw h4 {
+    font-size: 4rem;
+  }
 }
 #code-link {
   display: flex;
@@ -680,6 +995,12 @@ footer p {
   color: black;
   text-align: center;
 }
+@media (max-width: 500px) {
+  #team-contact-section .help-title h2 {
+    font-size: 3.7rem;
+    letter-spacing: -1px;
+  }
+}
 #team-contact-section .help-title .line-break {
   content: "";
   display: block;
@@ -687,12 +1008,4 @@ footer p {
   width: 40px;
   background-color: #009631;
   margin: 2% auto;
-}
-.contact-container {
-  width: 60%;
-  background-color: #F7F7F7;
-  border: 2px solid #EEE;
-  padding: 2%;
-  margin: 5% auto;
-  border-radius: 10px;
 }

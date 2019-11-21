@@ -2,6 +2,9 @@
 .spacer {
     width: 100%;
     height: 140px;
+    @media @mobile {
+        height: 100px;
+    }
 }
 
 // Header section of team page, includes the H1 and H2 for page
@@ -10,6 +13,12 @@
     background-color: white;
     width: 85%;
     margin: 0 auto;
+    @media @mobile {
+        padding-bottom: 5%;
+    }
+    @media @tablet {
+        padding: 3% 0;
+    }
     .about-us {
         .custom-layout(flex-start, center);
         .line {
@@ -19,20 +28,32 @@
             width: 40px;
             margin-right: 5px;
             margin-bottom: 5px;
+            @media @mobile {
+                width: 30px;
+            }
         }
         h5 {
             .fonts(2rem,@darker);
             margin-bottom: 5%;
+            @media @mobile {
+                font-size: 1.7rem;
+            }
         }
     }
     h1 {
-        .fonts(4.8rem, black)
+        .fonts(4.8rem, black);
+        @media @mobile {
+            font-size: 4rem;
+        }
     }
     h2 {
         .fonts(3.4rem, @fontgrey);
         font-family: 'Varela Round', sans-serif;
         text-align: left;
         margin: 2% 0 8% 0;
+        @media @mobile {
+            display: none;
+        }
         a {
             color: @fontgrey;
         }
@@ -51,6 +72,12 @@
         .lead-photo {
             width: 24%;
             border-radius: 200px;
+            @media @mobile {
+                width: 34%;
+            }
+            @media @tablet {
+                width: 34%;
+            }
         }
         h4 {
             .fonts(2.5rem, black);
@@ -68,10 +95,24 @@
     .team-container {
         .wrap(space-between, center);
         padding: 1%;
+        @media @mobile {
+            .wrap(space-around, center);
+        }
+        @media @tablet {
+            .wrap(space-around, center);
+        }
         .member {
             .columns(center, center);
             width: 25%;
             margin: 2% 2%;
+            @media @mobile {
+                width: 35%;
+                margin-top: 3%;
+            }
+            @media @tablet {
+                width: 35%;
+                margin-top: 3%;
+            }
             .photo {
                 width: 100%;
                 border-radius: 200px;
@@ -79,14 +120,18 @@
             h4 {
                 .fonts(2.5rem, black);
                 margin-top: 7px;
+                @media @mobile {
+                    text-align:  center;
+                }
             }
             p {
                 .fonts(2rem,#8a8a8a);
-                margin-top: -5px;
+                @media @mobile {
+                    text-align:  center;
+                }
             }
             a {
                 .fonts(2rem,@darker);
-                margin-top: -8px;
             }
         }
     }
@@ -98,18 +143,44 @@
     width: 65%;
     margin: 0 auto;
     padding: 8% 0;
+    @media @mobile {
+        .columns(center, center);
+        width:85%;
+    }
+    @media @tablet {
+        .columns(center, center);
+        width:85%;
+    }
     h3 {
         .fonts(4.8rem, black);
+        @media @mobile {
+            font-size: 4.2rem;
+        }
     }
     .lambda-bw {
         .columns(center,center);
         width: 35%;
+        @media @mobile {
+            width: 80%;
+        }
+        @media @tablet {
+            width: 70%;
+        }
         img {
             width: 90%;
+            @media @mobile {
+                margin-top: 2%;
+            }
+            @media @tablet {
+                margin-top: 2%;
+            }
         }
         h4 {
-            .fonts(4rem, black);
+            .fonts(3.5rem, black);
             letter-spacing: 1px;
+            @media @tablet {
+                font-size: 4rem;
+            }
         }
     }
 }
@@ -151,6 +222,10 @@
         width: 100%;
         h2 {
             .title-text();
+            @media @mobile {
+                font-size: 3.7rem;
+                letter-spacing: -1px;
+            }
         }
         .line-break {
             .line();
@@ -159,11 +234,11 @@
 }
 
 // Grey box container surrounding contact form
-.contact-container {
-    width: 60%;
-    background-color: @bggrey;
-    border: 2px solid @bordergrey;
-    padding: 2%;
-    margin: 5% auto;
-    border-radius: 10px;
-}
+// .contact-container {
+//     width: 60%;
+//     background-color: @bggrey;
+//     border: 2px solid @bordergrey;
+//     padding: 2%;
+//     margin: 5% auto;
+//     border-radius: 10px;
+// }
