@@ -179,7 +179,7 @@ p {
   top: 0;
 }
 .nav-container #navbar a {
-  padding: 0.5% 1%;
+  padding: 0.5% 0;
   width: 25%;
 }
 .nav-container #navbar a h2 {
@@ -187,9 +187,9 @@ p {
   color: white;
 }
 .nav-container #navbar nav {
-  width: 35%;
+  width: 65%;
   font-size: 1.8rem;
-  padding: 0.5% 5%;
+  padding: 0.5% 2% 0.5% 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -197,9 +197,13 @@ p {
 .nav-container #navbar nav a {
   color: white;
   text-decoration: none;
+  text-align: center;
 }
 .nav-container .navbar1 {
   background-color: black !Important;
+}
+.team-nav {
+  background-color: black;
 }
 form {
   max-width: 800px;
@@ -215,7 +219,7 @@ form textarea {
   border-radius: 8px;
   display: block;
   width: 100%;
-  height: 43px;
+  height: 50px;
   font-family: 'Varela Round', sans-serif;
   font-size: 1.5rem;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
@@ -311,9 +315,9 @@ footer p {
   margin: 15% 0;
 }
 #home .main-header h1 {
-  font-size: 7.5rem;
-  margin: 0.5% auto;
+  font-size: 7.2rem;
   color: white;
+  margin: 0.5% auto;
 }
 #home .main-header h3 {
   font-size: 2.4rem;
@@ -330,7 +334,7 @@ footer p {
   display: block;
   cursor: pointer;
   width: 22%;
-  height: 54px;
+  height: 52px;
   font-size: 2.4rem;
   border-radius: 10px;
   color: black;
@@ -348,7 +352,7 @@ footer p {
   display: block;
   cursor: pointer;
   width: 22%;
-  height: 54px;
+  height: 52px;
   font-size: 2.4rem;
   border-radius: 10px;
   color: black;
@@ -398,7 +402,7 @@ footer p {
   margin: 3% auto;
 }
 .section1-container .box-container :hover {
-  background-color: #f7f7f7;
+  background-color: #F7F7F7;
   -webkit-transition: background-color 500ms linear;
   -ms-transition: background-color 500ms linear;
   transition: background-color 500ms linear;
@@ -408,12 +412,9 @@ footer p {
   width: 30%;
   text-align: center;
   padding: 40px 20px;
-  border: 1px solid #ededed;
+  border: 1px solid #EEE;
   border-radius: 10px;
   margin: 15px 0px;
-}
-.section1-container .box-container .box .icons {
-  filter: invert(34%) sepia(86%) saturate(5313%) hue-rotate(137deg) brightness(99%) contrast(101%);
 }
 .section1-container .box-container .box h3 {
   font-size: 2.4rem;
@@ -430,7 +431,7 @@ footer p {
 }
 .section2-container {
   width: 100%;
-  background-color: #FAFAFA;
+  background-color: #F7F7F7;
   border-top: 1px solid #EEE;
   border-bottom: 1px solid #EEE;
   padding-bottom: 4%;
@@ -453,7 +454,7 @@ footer p {
   background-color: #009631;
   margin: 2% auto;
 }
-.section2-container .featured-container {
+.section2-container .news-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -461,7 +462,7 @@ footer p {
   width: 90%;
   margin: 4% auto;
 }
-.section2-container .featured-container .featured-news {
+.section2-container .news-container .top-news {
   width: 24%;
   margin: 1% 3%;
   border-radius: 10px;
@@ -490,64 +491,208 @@ footer p {
 }
 .section3-container .contact-container {
   width: 60%;
-  background-color: #FAFAFA;
+  background-color: #F7F7F7;
   border: 2px solid #EEE;
-  padding: 2% 0;
-  margin: 6% auto;
+  padding: 2%;
+  margin: 5% auto;
   margin-bottom: 10%;
   border-radius: 10px;
+}
+.spacer {
+  width: 100%;
+  height: 140px;
 }
 #team-header {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: white;
+  width: 85%;
+  margin: 0 auto;
+}
+#team-header .about-us {
+  display: flex;
+  justify-content: flex-start;
   align-items: center;
-  height: 100vh;
-  max-width: 100%;
-  position: scroll;
 }
-#team-header .bg-img {
-  min-height: 720px;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-  position: absolute;
-  background-color: black;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  display: block;
+#team-header .about-us .line {
+  border-bottom: solid 1px #009631;
+  content: '';
+  vertical-align: middle;
+  width: 40px;
+  margin-right: 5px;
+  margin-bottom: 5px;
 }
-#team-header .team-header {
+#team-header .about-us h5 {
+  font-size: 2rem;
+  color: #009631;
+  margin-bottom: 5%;
+}
+#team-header h1 {
+  font-size: 4.8rem;
+  color: black;
+}
+#team-header h2 {
+  font-size: 3.4rem;
+  color: #949494;
+  font-family: 'Varela Round', sans-serif;
+  text-align: left;
+  margin: 2% 0 8% 0;
+}
+#team-header h2 a {
+  color: #949494;
+}
+#team-section {
+  width: 100%;
+  background-color: #F7F7F7;
+  border-top: 1px solid #EEE;
+  border-bottom: 1px solid #EEE;
+  padding: 8% 7.5%;
+}
+#team-section .lead-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: space-around;
-  text-align: center;
-  margin: 15% 0;
+  align-items: center;
 }
-#team-header .team-header h1 {
-  font-size: 5.5rem;
-  color: white;
-  margin: 0.5% auto;
+#team-section .lead-container .lead-photo {
+  width: 24%;
+  border-radius: 200px;
 }
-#team-header .team-header h3 {
-  font-size: 2.4rem;
-  color: white;
-  font-family: 'Varela Round', sans-serif;
-  letter-spacing: 0.15rem;
+#team-section .lead-container h4 {
+  font-size: 2.5rem;
+  color: black;
+  margin-top: 7px;
 }
-#team-header .team-header img {
-  width: 15%;
-  margin: 1.5% auto;
-  filter: invert(1);
+#team-section .lead-container p {
+  font-size: 2rem;
+  color: #8a8a8a;
+  margin-top: -5px;
 }
-.team-sec1 {
+#team-section .lead-container a {
+  font-size: 2rem;
+  color: #009631;
+  margin-top: -8px;
+}
+#team-section .team-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1%;
+}
+#team-section .team-container .member {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  margin: 2% 2%;
+}
+#team-section .team-container .member .photo {
+  width: 100%;
+  border-radius: 200px;
+}
+#team-section .team-container .member h4 {
+  font-size: 2.5rem;
+  color: black;
+  margin-top: 7px;
+}
+#team-section .team-container .member p {
+  font-size: 2rem;
+  color: #8a8a8a;
+  margin-top: -5px;
+}
+#team-section .team-container .member a {
+  font-size: 2rem;
+  color: #009631;
+  margin-top: -8px;
+}
+#sponsor-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 65%;
+  margin: 0 auto;
+  padding: 8% 0;
+}
+#sponsor-section h3 {
+  font-size: 4.8rem;
+  color: black;
+}
+#sponsor-section .lambda-bw {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+}
+#sponsor-section .lambda-bw img {
   width: 90%;
-  margin: 10% auto;
 }
-.team-sec1 p {
-  margin-bottom: 10%;
+#sponsor-section .lambda-bw h4 {
+  font-size: 4rem;
+  color: black;
+  letter-spacing: 1px;
+}
+#code-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #F7F7F7;
+  border-top: 1px solid #EEE;
+  border-bottom: 1px solid #EEE;
+  margin: 0 auto;
+  padding: 8% 0;
+}
+#code-link h2 {
+  font-size: 4.8rem;
+  color: black;
+  text-align: center;
+  margin: 0 auto;
+}
+#code-link h2 a {
+  cursor: pointer;
+  background: linear-gradient(to bottom, palegreen 0%, palegreen 100%);
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 30px 30px;
+  color: black;
+  transition: background-size 0.2s;
+}
+#code-link h2 a :hover {
+  background-size: 4px 50px;
+}
+#team-contact-section {
+  width: 100%;
+  background-color: white;
+  padding: 8% 0;
+}
+#team-contact-section .help-title {
+  width: 100%;
+}
+#team-contact-section .help-title h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4rem;
+  color: black;
+  text-align: center;
+}
+#team-contact-section .help-title .line-break {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 40px;
+  background-color: #009631;
+  margin: 2% auto;
+}
+.contact-container {
+  width: 60%;
+  background-color: #F7F7F7;
+  border: 2px solid #EEE;
+  padding: 2%;
+  margin: 5% auto;
+  border-radius: 10px;
 }

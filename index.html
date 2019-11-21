@@ -23,16 +23,18 @@
 
 <body>
 
-  <!-- This section includes all elements inside of the background image of landing page, including the fixed navbar -->
+  <!-- This section includes all elements inside of the background image of landing page, including the fixed navbar prior to scroll -->
   <header id="home">
     <div class="nav-container">
       <div id="navbar">
           <a href="./index.html"><h2>Hacker News</h2></a>
         <nav>
           <a href="index.html">Home</a>
-          <a href="team.html">Team</a>
-          <a href="#">Sign In</a>
-          <a href="#">Sign Up</a>
+          <a href="#features">Features</a>
+          <a href="#news">Top News</a>
+          <a href="#contact">Contact Us</a>
+          <a href="team.html">Our Team</a>
+          <a href="#">Sign In/Up</a>
         </nav>
       </div>
     </div>
@@ -48,8 +50,8 @@
     </div>
   </header>
 
-  <!-- This container includes all elements in first section (Services: white background) -->
-  <section class="section1-container">
+  <!-- This section includes all elements in first section (Services: white background) -->
+  <section id="features" class="section1-container">
 
     <div class="section1-title">
       <h2>Redesigned for 2019</h2>
@@ -82,27 +84,27 @@
 
   </section>
 
-  <!-- This container includes all elements in second section (Featured News: grey background) -->
-  <section class="section2-container">
+  <!-- This section includes all elements in second section (Featured News: grey background) -->
+  <section id="news" class="section2-container">
 
     <div class="section2-title">
-      <h2>Featured News</h2>
+      <h2>Breaking News & Top Stories</h2>
       <div class="line-break"></div>
     </div>
 
-    <div class="featured-container">
-      <img class="featured-news" src="img/square.png" alt="" />
-      <img class="featured-news" src="img/square.png" alt="" />
-      <img class="featured-news" src="img/square.png" alt="" />
-      <img class="featured-news" src="img/square.png" alt="" />
-      <img class="featured-news" src="img/square.png" alt="" />
-      <img class="featured-news" src="img/square.png" alt="" />
+    <div class="news-container">
+      <img class="top-news" src="img/square.png" alt="" />
+      <img class="top-news" src="img/square.png" alt="" />
+      <img class="top-news" src="img/square.png" alt="" />
+      <img class="top-news" src="img/square.png" alt="" />
+      <img class="top-news" src="img/square.png" alt="" />
+      <img class="top-news" src="img/square.png" alt="" />
     </div>
 
   </section>
 
-  <!-- This container includes all elements in third section (Get in touch: white background) -->
-  <section class="section3-container">
+  <!-- This section includes all elements in third section (Contact form: white background) -->
+  <section id="contact" class="section3-container">
 
     <div class="section3-title">
       <h2>Get In Touch</h2>
@@ -129,7 +131,8 @@
     <p>Copyright &#9400; Lambda School Build Week 2019</p>
   </footer>
 
-  <script> //this script changes the background color of the navbar to black after scrolling 50px, by changing it's class to .navbar1
+  <!-- This script changes the background color of the navbar to black after scrolling 50px, by changing it's class to .navbar1 -->
+  <script> 
       window.onscroll = function() {
         var nav = document.getElementById('navbar');
         if ( window.pageYOffset > 50 ) {
